@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -8,7 +10,25 @@ public class Main {
         boolean negative = false;
         double sum = 0;
         int lenth = 0;
+        double arif;
+        boolean dot = false;
 
+
+        while (! dot) {
+            dot = true;
+            for (int i = 0; i < numbers.length - 1; i++) {
+                if (numbers[i] > numbers[i + 1]) {
+                    dot = false;
+                    arif = numbers[i];
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = arif;
+                }
+                System.out.println(Arrays.toString(numbers));
+            }
+        }
+
+
+        
         for (double currentNumbers : numbers ) {
             if (currentNumbers < 0){
                 negative = true;
